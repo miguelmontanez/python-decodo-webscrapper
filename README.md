@@ -28,13 +28,26 @@ cd decodo-webscrapper
 
 4. Replace the API key at the top main.py with your Decodo API key.
 
-5. Install uv:
+5. Install uv and dependencies:
 
 ```bash
 pip install uv
 ```
 
+```bash
+uv add "requests"
+uv add "beautifulsoup4"
+```
+
 6. Run MCP server and connect it to Claude Desktop:
+
+Run this command
+
+```bash
+uv run mcp install main.py
+```
+
+Then run this command
 
 ```bash
 uv run mcp install -e. main.py

@@ -13,7 +13,13 @@ mcp = FastMCP("DecodoWebsiteScrapper")
 # Tool: Get Article Text
 @mcp.tool()
 def get_article_text(website_url: str) -> str:
-    """Scapres a wesbite HTML and extracts the text from it """
+    """
+        Scrapes a website HTML and extract the articles text
+        Input:
+            website_url: The URL of the website to scrape
+        Output:
+            The text content of the article
+    """
     
     url = "https://scraper-api.decodo.com/v2/scrape"
     

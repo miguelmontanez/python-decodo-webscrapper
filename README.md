@@ -5,7 +5,7 @@ A Model Context Protocol (MCP) server that provides website scraping capabilitie
 ## ✨ Features
 
 - **🌐 Website Scraping**: Scrapes any publicly accessible website using the Decodo API
-- **🎯 Targeted Content Extraction**: Extracts text from specific HTML div elements by ID
+- **🎯 Targeted Content Extraction**: Extracts text from HTML page
 - **🔌 MCP Integration**: Built as an MCP server for seamless integration with AI assistants
 
 ## 📦 Installation

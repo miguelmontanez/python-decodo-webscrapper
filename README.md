@@ -22,8 +22,9 @@ https://claude.ai/download
 3. Clone this repository:
 
 ```bash
-git clone https://github.com/abdullahtarek/mcp_webscrapper
-cd decodo-webscrapper
+git clone https://github.com/miguelmontanez/python-decodo-webscrapper
+
+cd python-decodo-webscrapper
 ```
 
 4. Replace the API key at the top main.py with your Decodo API key.

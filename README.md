@@ -1,52 +1,102 @@
-# 🕷️ Decodo Website Scraper
+# Decodo Website Scraper
 
-A Model Context Protocol (MCP) server that provides website scraping capabilities using the Decodo scraping API. This tool allows you to extract text content from specific HTML elements on web pages.
+A Model Context Protocol (MCP) server that provides website scraping capabilities using the Decodo scraping API. This tool allows you to extract text content from web pages for processing and analysis.
 
-## ✨ Features
+## Features
 
-- **🌐 Website Scraping**: Scrapes any publicly accessible website using the Decodo API
-- **🎯 Targeted Content Extraction**: Extracts text from HTML page
-- **🔌 MCP Integration**: Built as an MCP server for seamless integration with AI assistants
+- **Website Scraping**: Scrapes publicly accessible websites using the Decodo API
+- **Content Extraction**: Extracts clean text content from HTML pages
+- **MCP Integration**: Built as an MCP server for seamless integration with AI assistants like Claude
+- **Error Handling**: Gracefully handles HTTP errors and unreachable websites
 
-## 📦 Installation
+## Project Structure
 
-1. Download Claude Desktop from this website and log in.
-
-```bash
-https://claude.ai/download
+```
+python-decodo-webscrapper/
+├── main.py           # MCP server with scraping tool
+├── pyproject.toml    # Project dependencies and metadata
+└── README.md         # This file
 ```
 
-2. Create a Decodo account and get your API key:  
-   Claim your free trial on Decodo: https://visit.decodo.com/aOL4yR
+## Prerequisites
 
-3. Clone this repository:
+- Python 3.13 or higher
+- A Decodo API token (get a free trial at https://visit.decodo.com/aOL4yR)
+- Claude Desktop application
 
+## Installation
+
+1. **Clone the repository**:
 ```bash
 git clone https://github.com/miguelmontanez/python-decodo-webscrapper
-
 cd python-decodo-webscrapper
 ```
 
-4. Replace the API key at the top main.py with your Decodo API key.
+2. **Create a Decodo account and obtain your API key**:
+   - Visit https://visit.decodo.com/aOL4yR to claim your free trial
+   - Copy your API token
 
-5. Install uv and dependencies:
+3. **Update the API token**:
+   - Open `main.py` and replace the `decodo_token` variable with your API token
 
+4. **Install dependencies**:
+   - The project uses `uv` for dependency management
 ```bash
 pip install uv
+uv sync
 ```
 
-```bash
-uv add "requests"
-uv add "beautifulsoup4"
-```
-
-6. Run MCP server and connect it to Claude Desktop:
-
-Run this command
-
+5. **Connect to Claude Desktop**:
 ```bash
 uv run mcp install main.py
 ```
+
+## Usage
+
+Once installed, the MCP server provides the following tool:
+
+### `get_article_text(website_url: str) -> str`
+
+Scrapes a website and extracts text content.
+
+**Parameters:**
+- `website_url` (string): The URL of the website to scrape
+
+**Returns:**
+- The plain text content extracted from the webpage
+
+**Example:**
+```python
+text = get_article_text("https://example.com/article")
+```
+
+## Dependencies
+
+- `beautifulsoup4` - HTML parsing
+- `requests` - HTTP requests
+- `mcp` - Model Context Protocol server
+- `pandas` - Data manipulation (optional)
+
+## Configuration
+
+- **API Token**: Set in the `decodo_token` variable in `main.py`
+- **Scraping Mode**: Currently configured for HTML headless scraping
+
+## Troubleshooting
+
+- **Website can't be crawled**: The website either blocks automated scraping or is temporarily unavailable. Check the website's robots.txt and terms of service.
+- **Invalid API token**: Verify your Decodo API token is correctly set in `main.py`
+- **Module not found errors**: Ensure dependencies are installed with `uv sync`
+
+## License
+
+This project is provided as-is for educational and research purposes.
+
+## References
+
+- [Model Context Protocol Documentation](https://modelcontextprotocol.io/)
+- [Decodo Scraper API](https://decodo.com/)
+- [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/)
 
 Then run this command
 

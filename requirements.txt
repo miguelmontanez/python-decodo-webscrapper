@@ -1,0 +1,14 @@
+# Requirements for Egaroshi Price Tracker
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+beautifulsoup4>=4.13.4
+requests>=2.32.3
+mcp[cli]>=1.9.1
+pandas>=2.2.3
+
+# Development dependencies (optional)
+# Install with: pip install -r requirements.txt[dev]
+# or manually: pip install pytest pytest-cov
+pytest>=7.4.0; extra == "dev"
+pytest-cov>=4.1.0; extra == "dev"

@@ -1,7 +1,7 @@
 [project]
-name = "decodo-webscrapper"
-version = "0.1.0"
-description = "Add your description here"
+name = "egaroshi-price-tracker"
+version = "1.0.0"
+description = "Accurate product price tracking and comparison across multiple vendors using the Decodo API"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -10,3 +10,13 @@ dependencies = [
     "pandas>=2.2.3",
     "requests>=2.32.3",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"

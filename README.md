@@ -1,6 +1,6 @@
-# Egaroshi Price Tracker
+# Python Decodo Accuracy Data Scrapper
 
-A Model Context Protocol (MCP) server for accurate product price tracking and comparison across multiple vendors (Amazon, Walmart, and others). Built for the Egaroshi platform to ensure reliable price data extraction and vendor comparison.
+A Model Context Protocol (MCP) server for accurate product price tracking and comparison across multiple vendors (Amazon, Walmart, and others). Built for the platform to ensure reliable price data extraction and vendor comparison.
 
 ## Features
 
@@ -16,7 +16,7 @@ A Model Context Protocol (MCP) server for accurate product price tracking and co
 ## Project Structure
 
 ```
-egaroshi-price-tracker/
+python-decodo-webscrapper/
 ├── main.py                 # MCP server with pricing tools
 ├── vendors.py             # Vendor-specific scraper implementations
 ├── utils.py               # Validation, comparison, and error handling utilities
@@ -332,7 +332,7 @@ For issues, questions, or feature requests:
 
 ---
 
-**Built for Egaroshi - Your Trusted Price Comparison Platform**
+**Built for - Your Trusted Price Comparison Platform**
 
 Then run this command
 
